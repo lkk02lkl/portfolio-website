@@ -1,0 +1,8 @@
+.nav {
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  top: 3rem;
+  gap: 1.5625rem;
+  left: 50%;
+}
