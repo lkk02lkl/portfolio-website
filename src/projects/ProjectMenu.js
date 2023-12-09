@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import classNames from 'classnames';
-import projects from './projectData';
+import React, { Component } from "react";
+import classNames from "classnames";
+import projects from "./projectData";
 import "../styles/projectsMenu.css";
 
-export default class ProjectMenu extends Component {
+export default class ProjectsMenu extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,21 +18,21 @@ export default class ProjectMenu extends Component {
   };
 
   renderContent = (projects) => {
-    return projects.map((project, index) => {
+    return projects.map((project, index) => (
       <div key={index} className={`project-sub-container-${index + 1}`}>
         <h3>{project.title}</h3>
-        <img src={project.image} alt={project.title} />
+        <img src={project.image} alt={project.title}></img>
         <div>{project.description}</div>
         <div className="link-container">
-          <a href={project.github} target="_blank" rel="noopener norefferer">
+          <a href={project.github} target="_blank" rel="noopener noreferrer">
             GITHUB
           </a>
           <a href={project.demo} target="_blank" rel="noopener noreferrer">
             DEMO
           </a>
         </div>
-      </div>;
-    });
+      </div>
+    ));
   };
 
   render() {
